@@ -1,5 +1,4 @@
 import React from "react"
-import CatCard from "./Components/CatCard"
 import CatCardList from "./Components/CatCardList"
 
 class App extends React.Component{
