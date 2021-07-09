@@ -16,12 +16,13 @@ class CatCardList extends React.Component {
     componentDidMount() {
         const self = this
 
-        var theCats = []
+        var randomStart = Math.floor(Math.random()*10+1)
 
-        for (var i = 0; i < 10; i++) {
-            axios.get("https://thatcopy.pw/catapi/rest/").then(function (response) {
+
+        for (var i = randomStart; i < randomStart+10; i++) {
+            axios.get("https://thatcopy.pw/catapi/restId/"+ String(i)).then(function (response) {
+                var theCats = self.state.cats
                 theCats.push(response.data)
-                console.log(response.data)
                 self.setState({cats: theCats})
             })
         }
@@ -29,20 +30,16 @@ class CatCardList extends React.Component {
     }
 
     render() {
+        console.log(this.state.cats)
         const self = this
         return (
             <div>
-                {/* {
-                    self.state.cats.map(function(item){
-                        return <CatCard imageSrc={item.url} id={item.id}/>
-                    }) */}
-
-
-
+                {
                     <Grid columns={5}>
                         {
                             self.state.cats.map(function (item) {
-                                return (<GridColumn key={item.id}>
+                                console.log(item)
+                                return (<GridColumn>
                                      <CatCard imageSrc={item.url} id={item.id}/>
                                 </GridColumn>)
                             })

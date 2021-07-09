@@ -4,7 +4,7 @@ import CatCardList from "./Components/CatCardList"
 class App extends React.Component{
   render(){
     return(
-      <div className="app" doubling stackable>
+      <div className="app">
         <CatCardList/>
       </div>
     )
