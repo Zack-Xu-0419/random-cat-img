@@ -1,3 +1,7 @@
+Here's a working website hosted on Netlify: 
+https://60e702732a7ce000076213a6--pensive-lamport-1e61da.netlify.app/
+Make sure you use desktop chrome to ensure that it works.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
